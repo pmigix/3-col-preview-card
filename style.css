@@ -1,0 +1,116 @@
+:root {
+    --orange: hsl(31, 77%, 52%);
+    --light-cyan: hsl(184, 100%, 22%);
+    --dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --white: hsl(0, 0%, 95%);
+    --ff-primary: 'Lexend Deca', sans-serif;
+    --ff-secondary: 'Big Shoulders Display', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    margin: 0 2rem;
+    display: flex;
+    max-width: 768px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2.5rem;
+}
+.card__desc {
+    font-family: var(--ff-primary);
+    color: var(--transparent-white);
+    font-size: 14px;
+    line-height: 1.5rem;
+    max-width: 200px;
+}
+.card__desc h1 {
+    margin: 1.5rem 0;
+    color: var(--white);
+    font-family: var(--ff-secondary);
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.card__btn {
+    margin: 2rem 0;
+}
+.card__btn a {
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 14px;
+    font-family: var(--ff-primary);
+    background-color: var(--white);
+    padding: .75rem 1.5rem;
+    border-radius: 2rem;
+}
+.card__btn a:hover {
+    color: var(--transparent-white);
+    background-color: transparent;
+    border: 2px solid var(--white);
+}
+.attribution {
+    font-family: var(--ff-primary);
+    font-size: 1rem;
+    color: #121212;
+    margin: 2rem 0;
+    text-align: center;
+}
+.attribution a {
+    color: var(--light-cyan);
+    text-decoration: none;
+}
+.attribution a:hover {
+    color: var(--dark-cyan)
+}
+.card.orange {
+    border-radius: .5rem 0 0 .5rem;
+}
+.card.dark-cyan {
+    border-radius: 0 .5rem .5rem 0;
+}
+
+.orange {
+    background-color: var(--orange);
+    color: var(--orange);
+}
+.light-cyan {
+    background-color: var(--light-cyan);
+    color: var(--light-cyan);
+}
+.dark-cyan {
+    background-color: var(--dark-cyan);
+    color: var(--dark-cyan);
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        display: block;
+        margin: 3rem 1rem;
+    }
+    .card__btn {
+        margin-bottom: 1rem;
+    }
+    .attribution {
+        margin-top: 0;
+    }
+    .card.orange {
+        border-radius: .5rem .5rem 0 0;
+    }
+    .card.dark-cyan {
+        border-radius: 0 0 .5rem .5rem;
+    }
+}
